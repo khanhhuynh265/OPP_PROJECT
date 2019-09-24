@@ -14,10 +14,18 @@ class helper
     }
     static function inputcate($calegory, $req){
         $calegory= readline($req);
-        if($calegory == 1 || $calegory == 2){
-            return $calegory;
+        if(is_numeric($calegory)){
+            switch($calegory)
+            {
+                case 1:
+                    return $calegory;break;
+                case 2:
+                    return $calegory;break;
+                default:
+                    self::inputcate($calegory,$req);
+            }
+
         }else{
-            echo "##########Nhap sai !\n";
             self::inputcate($calegory,$req);
         }
     }
