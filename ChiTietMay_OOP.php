@@ -198,13 +198,11 @@ class Kho
     public function timMay(){
         $this->maSo = readline('Nhap ma so may ban muon tim :');
         foreach ($this->danhsach as $item){
-            echo $item->getMaMay();
             if($item->getMaMay() == $this->maSo){
                 echo "May ban muon tim la :::::::::::::::::::::::::::::::::: \n";
                 $item->xuat();
-            }else{
-                echo "Ma so vua nhap khong co ket qua !";
             }
+            echo "\n\n\n\n";
         }
     }
 }
@@ -213,22 +211,26 @@ $kho= new Kho();
 $kho->nhapMay();
 
 do{
-    $chon = readline('1. Thong ke || 2. Xuat tong gia cua kho || 3. Xuat tong trong luong kho || 4. Tim kiem may   ...');
-}while($chon!= 1 && $chon != 2 && $chon != 3 && $chon != 4);
+    $next= readline('Nhap 1 de tiep tuc chuong trinh...');
+    do{
+        $chon = readline('1. Thong ke || 2. Xuat tong gia cua kho || 3. Xuat tong trong luong kho || 4. Tim kiem may   ...');
+    }while($chon!= 1 && $chon != 2 && $chon != 3 && $chon != 4);
 
-if($chon==1){
-    $kho->thongke();
-}else{
-    if($chon==2){
-        $kho->tinhTongTien();
+    if($chon==1){
+        $kho->thongke();
     }else{
-        if($chon==3){
-            $kho->tinhTongKhoiLuong();
+        if($chon==2){
+            $kho->tinhTongTien();
         }else{
-            $kho->timMay();
+            if($chon==3){
+                $kho->tinhTongKhoiLuong();
+            }else{
+                $kho->timMay();
+            }
         }
     }
-}
+}while($next == 1);
+
 
 
 
