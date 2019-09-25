@@ -112,7 +112,7 @@ class May {
     
     public function nhap(){
         $this->maSoMay= helper::inputIn($this->maSoMay,"Nhap ma so may: ");
-        $this->soLuong= helper::inputIn($this->soLuong,'Ban muon nhap bao nhieu chi tiet may :');
+        $this->soLuong= helper::inputIn($this->soLuong,'Ban muon nhap bao nhieu chi tiet may : ');
         echo ":::::::::::::::::::::::::::::::::::"."\n";
         for($i=0; $i<$this->soLuong;$i++)
         {
@@ -211,7 +211,7 @@ $kho= new Kho();
 $kho->nhapMay();
 
 do{
-    $next= readline('Nhap 1 de tiep tuc chuong trinh...');
+
     do{
         $chon = readline('1. Thong ke || 2. Xuat tong gia cua kho || 3. Xuat tong trong luong kho || 4. Tim kiem may   ...');
     }while($chon!= 1 && $chon != 2 && $chon != 3 && $chon != 4);
@@ -229,7 +229,8 @@ do{
             }
         }
     }
-}while($next == 1);
+    $next= readline('Nhap 1 de ket thuc chuong trinh...');
+}while($next != 1);
 
 
 
