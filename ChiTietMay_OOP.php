@@ -216,19 +216,19 @@ do{
         $chon = readline('1. Thong ke || 2. Xuat tong gia cua kho || 3. Xuat tong trong luong kho || 4. Tim kiem may   ...');
     }while($chon!= 1 && $chon != 2 && $chon != 3 && $chon != 4);
 
-    if($chon==1){
-        $kho->thongke();
-    }else{
-        if($chon==2){
-            $kho->tinhTongTien();
-        }else{
-            if($chon==3){
-                $kho->tinhTongKhoiLuong();
-            }else{
-                $kho->timMay();
-            }
-        }
+    switch($chon){
+        case 1:
+            $kho->thongke();break;
+        case 2:
+            $kho->tinhTongTien();break;
+        case 3:
+            $kho->tinhTongKhoiLuong();break;
+        case 4:
+            $kho->timMay();break;
+        default:
+            break;
     }
+    
     $next= readline('Nhap 1 de ket thuc chuong trinh...');
 }while($next != 1);
 
