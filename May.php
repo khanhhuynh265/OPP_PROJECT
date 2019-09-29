@@ -6,12 +6,12 @@ require_once "helper.php";
 
 class May {
 
-    public $maSoMay;
-    public $soLuong;
-    public $dsChiTiet=[];
-    public $tongTien=0;
-    public $tongKhoiLuong=0;
-    public $loai;
+    private $maSoMay;
+    private $soLuong;
+    protected $dsChiTiet=[];
+    protected $tongTien=0;
+    protected $tongKhoiLuong=0;
+    protected $loai;
 
     public function nhap() {
         $this->maSoMay=helper:: inputIn($this->maSoMay, "Nhap ma so may: ");

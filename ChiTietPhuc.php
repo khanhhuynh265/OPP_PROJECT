@@ -8,9 +8,9 @@ require_once "helper.php";
 
 class chiTietPhuc extends Chitietmay
 {
-    public $soluong;
-    public $chitietcon= [];
-    public $loai;
+    private $soluong;
+    private $chitietcon= [];
+    pr $loai;
 
     public function nhap(){
         parent::nhap();

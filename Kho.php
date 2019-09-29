@@ -6,11 +6,11 @@ require_once "helper.php";
 
 class Kho {
 
-    public $soluong;
-    public $tien=0;
-    public $khoiLuong=0;
-    public $danhsach=[];
-    public $maSo;
+    private $soluong;
+    protected $tien=0;
+    protected $khoiLuong=0;
+    protected $danhsach=[];
+    private $maSo;
 
 
     public function nhapMay() {
