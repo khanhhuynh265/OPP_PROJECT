@@ -10,7 +10,7 @@ class chiTietPhuc extends Chitietmay
 {
     private $soluong;
     private $chitietcon= [];
-    pr $loai;
+    private $loai;
 
     public function nhap(){
         parent::nhap();
@@ -39,6 +39,7 @@ class chiTietPhuc extends Chitietmay
     public function xuat(){
         foreach ($this->chitietcon as $item)
         {
+            echo "Chi tiet phuc: ***************\n";
             $item->xuat();
         }
 
